@@ -5,5 +5,11 @@
 @layer base {
     html {
       font-family: Kanit, sans-serif;
+      background-color: var(--neutral-50);
     }
+  }
+
+  @font-face {
+    font-family: "Opti";
+    src: url("/fonts/Opti.otf");
   }

@@ -1,0 +1,69 @@
+<script lang="ts">
+
+import { onMount } from 'svelte';
+
+export let path : string = '/';
+
+
+	/* set width of link components to fit whole numner of underline track on mount
+	using "background-repeat: round" makes them look dinconsistant */
+	/* let element : HTMLElement;
+	let innerElement : HTMLElement;
+
+	function setWidth () {
+		let intitialWidth : number = element.clientWidth;
+		let trackWidth : number = parseFloat(getComputedStyle(element).fontSize) * 0.9;
+		let newWidth : number = intitialWidth + (trackWidth - (intitialWidth % trackWidth));
+		element.style.width = newWidth + 'px';
+	} */
+
+/* 	onMount(() => {
+		/* let intitialWidth = element.clientWidth;
+		let trackWidth = parseFloat(getComputedStyle(element).fontSize) * 0.9;
+		let newWidth = intitialWidth + (trackWidth - (intitialWidth % trackWidth));
+		element.style.width = newWidth + 'px'; */
+		/* console.log(getComputedStyle(innerElement, ':before').bottom) */
+	/* 	setWidth();
+	});  */
+</script>
+
+<!-- <li bind:this={element}>
+	<a bind:this={innerElement} href="/"><slot /></a>
+</li>
+ -->
+
+ <li>
+	<a href={path}><slot /></a>
+</li>
+<style>
+	/* li {
+		position: relative;
+		display: block;
+		overflow-x: clip;
+		text-align: center;
+		width:max-content;
+		line-height: 1.5;
+	}
+
+	li a::before {
+		content: '';
+		position: absolute;
+		bottom: .5ch;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+		background-image: url(/svg/track.svg);
+		background-size: 0.9em;
+		background-position: left bottom;
+		background-repeat: repeat no-repeat;
+	}
+
+	li a:hover::before,
+	li a:focus::before {
+		content: '';
+		transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+		transform: translateX(100%);
+		transform-origin: left;
+	} */
+</style>
