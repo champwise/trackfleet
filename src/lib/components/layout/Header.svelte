@@ -29,11 +29,6 @@
                     {name}
                 </Link>
 			{/each}
-          <!--   <Link path={'/features'}>Features</Link>
-            <Link path={'/pricing'}>Pricing</Link>
-            <Link path={'/company'}>Company</Link>
-            <Link path={'/for-mechanics'}>For Mechanics</Link>
-            <Link path={'/for-operators'}>For Operators</Link> -->
             <li class="ml-6 text-lg">
                 <Button type={'primary'}  path={'/signup'}>Try it for free</Button>
             </li>
