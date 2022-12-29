@@ -17,7 +17,7 @@
         padding-top: .375rem;
         padding-bottom: .375rem;        
         border-width: 3px;
-        transition: all .3s ease-in-out;
+        transition: all .3s cubic-bezier(0.19, 1, 0.22, 1);
     }
 
     .primary {
