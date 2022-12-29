@@ -22,14 +22,14 @@
 	a::after {
 		content: '';
 		position: absolute;
-		bottom: -.1em;
+		bottom: -0.1em;
 		left: 0;
 		width: 100%;
 		height: 0.2em;
 		background: var(--accent-500);
 		transform: scaleX(0);
 		transform-origin: right center;
-		transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1)
+		transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 	}
 
 	a:hover::after {
@@ -42,5 +42,4 @@
 		transform: scaleX(1);
 		transition: none;
 	}
-	
 </style>
