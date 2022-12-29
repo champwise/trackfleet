@@ -6,17 +6,18 @@
 
 </script>
 
-<button class="{type == 'secondary' ? 'secondary' : type == 'primary' ? 'primary' : '' }" class:form><a href={path}><slot/></a></button>
+<a class="{type == 'secondary' ? 'secondary' : type == 'primary' ? 'primary' : '' }" class:form href={path}><slot/></a>
 
 <style>
 
-    button {
+    a {
         border-radius: .25rem;
-        font-size: 1rem;
+        font-size: inherit;
         padding-inline: .75rem;
         padding-top: .375rem;
-        padding-bottom: .375rem;
+        padding-bottom: .375rem;        
         border-width: 3px;
+        transition: all .3s ease-in-out;
     }
 
     .primary {
@@ -33,18 +34,13 @@
     .secondary:hover,
     .primary:focus, 
     .secondary:focus {
+        transition: all .3s ease-in-out;
         background-color: var(--accent-500);
         border-color: var(--accent-500);
     }
 
     .primary:active, .secondary:active {
         border-color: var(--neutral-900);  
-    }
-
-    
-
-    .form {
-        height: 3rem;
     }
 
 
