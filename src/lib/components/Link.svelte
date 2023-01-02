@@ -2,10 +2,13 @@
 	/* path for the link */
 	export let path: string = '/';
 	export let active: boolean;
+	export let bold: string = '';
+	export let fs: string = '';
+	
 </script>
 
-<li class="mx-6">
-	<a href={path} class:active><slot /></a>
+<li class="xl:mx-6 mx-4">
+	<a href={path} class:active class="{bold} {fs}"><slot /></a>
 </li>
 
 <style>
@@ -43,3 +46,6 @@
 		transition: none;
 	}
 </style>
+<!-- ideas to make track under line work
+		- SASS with selectors within selectors
+		- Emotion css or some css-in-js library -->
