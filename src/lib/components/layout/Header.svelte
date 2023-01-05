@@ -56,15 +56,15 @@
 	<header class="relative border-b-2 border-neutral-900 py-5  px-6 sm:px-9">
 		<div class="flex items-center">
 			<div class="mr-auto">
-				<a href="/"><img class="h-12" src="/logo/logo-black.svg" alt="" /></a>
+				<a href="/"><img class="h-8" src="/logo/logo-black.svg" alt="" /></a>
 			</div>
 			<li class="mr-6 hidden text-base sm:block">
 				<Button type={'primary'} path={'/signup'}>Try it for free</Button>
 			</li>
-			<button id="nav-toggle" class="relative" on:click={openNav}>
-				<div class:open id="bar1" />
-				<div class:open id="bar2" />
-				<div class:open id="bar3" />
+			<button id="nav-toggle" class="relative h-8 w-8" on:click={openNav}>
+				<div class:open class="rounded-sm" id="bar1" />
+				<div class:open class="rounded-sm" id="bar2" />
+				<div class:open class="rounded-sm" id="bar3" />
 			</button>
 		</div>
 	</header>
@@ -90,8 +90,6 @@
 
 <style>
 	#nav-toggle {
-		width: 2rem;
-		height: 2rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;

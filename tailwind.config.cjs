@@ -32,7 +32,12 @@ module.exports = {
 
       fontFamily: {
         opti: ["Opti", "sans-serif"],
-      }
+      },
+
+      borderWidth: {
+        '3': '3px'
+      },
+
     }
   },
   plugins: [],
