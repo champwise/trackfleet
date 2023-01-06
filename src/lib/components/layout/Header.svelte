@@ -1,9 +1,7 @@
 <script lang="ts">
 	import Link from '$components/Link.svelte';
 	import Button from '$components/Button.svelte';
-
 	import { page } from '$app/stores';
-	import { beforeUpdate } from 'svelte';
 
 	const links = [
 		['/features', 'Features'],
@@ -56,20 +54,24 @@
 	<header class="relative border-b-2 border-neutral-900 py-5  px-6 sm:px-9">
 		<div class="flex items-center">
 			<div class="mr-auto">
-				<a href="/"><img class="h-8" src="/logo/logo-black.svg" alt="" /></a>
+				<a href="/"><img class="h-12" src="/logo/logo-black.svg" alt="" /></a>
 			</div>
 			<li class="mr-6 hidden text-base sm:block">
 				<Button type={'primary'} path={'/signup'}>Try it for free</Button>
 			</li>
-			<button id="nav-toggle" class="relative h-8 w-8" on:click={openNav}>
-				<div class:open class="rounded-sm" id="bar1" />
-				<div class:open class="rounded-sm" id="bar2" />
-				<div class:open class="rounded-sm" id="bar3" />
+			<button id="nav-toggle" class="relative" on:click={openNav}>
+				<div class:open id="bar1" />
+				<div class:open id="bar2" />
+				<div class:open id="bar3" />
 			</button>
 		</div>
 	</header>
-	<nav id="nav-menu" class="absolute bg-neutral-50 left-full w-full" class:open>
-		<ul class="flex flex-col items-center gap-4 my-4" on:click={openNav} on:keydown={openNav}>
+	<!-- #todo 
+		-review when landing page has content
+		-set max height
+	-->
+	<nav id="nav-menu" class="absolute left-full w-full bg-neutral-50" class:open>
+		<ul class="my-4 flex flex-col items-center gap-4" on:click={openNav} on:keydown={openNav}>
 			{#each links as [path, name]}
 				<Link
 					{path}
@@ -78,10 +80,10 @@
 					{name}
 				</Link>
 			{/each}
-			<li class="text-lg my-4">
+			<li class="my-4 text-lg">
 				<Button type={'secondary'} path={'/login'}>Log in</Button>
 			</li>
-			<li class="text-lg my-4">
+			<li class="my-4 text-lg">
 				<Button type={'primary'} path={'/signup'}>Try it for free</Button>
 			</li>
 		</ul>
@@ -90,6 +92,8 @@
 
 <style>
 	#nav-toggle {
+		width: 2rem;
+		height: 2rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -111,6 +115,5 @@
 
 	.open#nav-menu {
 		left: 0;
-
 	}
 </style>

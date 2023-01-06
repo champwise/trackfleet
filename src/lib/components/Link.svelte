@@ -4,12 +4,14 @@
 	export let active: boolean;
 	export let bold: string = '';
 	export let fs: string = '';
-	
 </script>
 
-<li class="xl:mx-6 mx-4">
+<li class="mx-4 xl:mx-6">
 	<a href={path} class:active class="{bold} {fs}"><slot /></a>
 </li>
+<!-- ideas to make track under line work
+		- SASS with selectors within selectors
+		- Emotion css or some css-in-js library -->
 
 <style>
 	li {
@@ -46,6 +48,3 @@
 		transition: none;
 	}
 </style>
-<!-- ideas to make track under line work
-		- SASS with selectors within selectors
-		- Emotion css or some css-in-js library -->
